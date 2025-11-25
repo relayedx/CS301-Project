@@ -23,6 +23,10 @@ void BudgetManager::listTransactions() const {
     }
 }
 
+const vector<Transaction>& BudgetManager::getTransactions() const {
+    return transactions;  // Just give me the data, don't print it
+}
+
 double BudgetManager::totalIncome() const {
     double sum = 0;
     for (const auto& t : transactions)
