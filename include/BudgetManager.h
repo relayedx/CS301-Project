@@ -13,6 +13,7 @@ public:
     double totalIncome() const;
     double totalExpense() const;
     double balance() const;
+    const vector<Transaction>& getTransactions() const;
 
     void saveToFile(const string& filename) const;
     void loadFromFile(const string& filename);
