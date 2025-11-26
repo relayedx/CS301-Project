@@ -20,6 +20,9 @@ public:
 
 private slots:
     void addTransaction();
+    void deleteTransaction();
+    void loadEditTransaction();
+    void saveEditTransaction();
     void refreshTransactionTable();
     void refreshSummary();
 
@@ -32,11 +35,19 @@ private:
 
     // Add Transaction Tab widgets
     QDateEdit *dateEdit;
-    QLineEdit *categoryEdit;
+    QComboBox *categoryCombo;
     QLineEdit *amountEdit;
-    QComboBox *typeCombo;
     QLineEdit *descriptionEdit;
     QPushButton *addButton;
+
+    // Edit / Delete Transaction Tab widgets
+    QTableWidget *editTable;
+    QDateEdit    *editDateEdit;
+    QComboBox    *editCategoryCombo;
+    QLineEdit    *editAmountEdit;
+    QLineEdit    *editDescriptionEdit;
+    QPushButton  *editSaveButton;
+    QPushButton  *editDeleteButton;
 
     // View Transactions Tab widgets
     QTableWidget *transactionTable;
@@ -51,4 +62,4 @@ private:
     void saveData();
 };
 
-#endif
+#endif // MAINWINDOW_H
